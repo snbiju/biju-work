@@ -2,6 +2,10 @@ package com.myapp.card.util.exception;
 
 import java.util.Date;
 
+/**
+ * Created by Biju Pillai
+ */
+
 public class ErrorDetails {
         private Date timestamp;
         private String message;

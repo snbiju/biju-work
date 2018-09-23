@@ -3,6 +3,10 @@ package com.myapp.card.util.exception;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+/**
+ * Created by Biju Pillai
+ */
+
 @ResponseStatus(HttpStatus.BAD_REQUEST)
 public class CreditCardValidationException extends RuntimeException {
     public CreditCardValidationException() {

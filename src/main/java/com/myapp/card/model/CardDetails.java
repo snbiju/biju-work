@@ -7,6 +7,10 @@ import javax.validation.constraints.Size;
 import javax.ws.rs.DefaultValue;
 import java.util.Objects;
 
+/**
+ * Created by Biju Pillai
+ */
+
 public class CardDetails {
     @NotNull
     private String name;
