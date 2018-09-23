@@ -1,5 +1,5 @@
 # biju-work
-To run mycardapp
+To run this application
 
 Basic requirement
 
