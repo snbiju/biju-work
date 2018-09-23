@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://C:/Biju/MyProject/myspring/src/test/test.iml" filepath="C:/Biju/MyProject/myspring/src/test/test.iml" />
+      <module fileurl="file://C:/Biju/MyProject/expense-manager-spring-react-master/src/test/test1.iml" filepath="C:/Biju/MyProject/expense-manager-spring-react-master/src/test/test1.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="com.sky.apps-1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../MyProject/parental/target/com.sky.apps-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
