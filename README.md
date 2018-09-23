@@ -3,19 +3,24 @@
 Basic requirement
 -----------------
 Java 8 or higher
+
 Spring boot 2.0.4.RELEASE
+
 Apache Maven 3.5.4
 
 
 To run
 -------
-clone https://github.com/snbiju/biju-work.git / or download
-go to biju-work-master
-mvn spring-boot:run
-POST call
+clone https://github.com/snbiju/biju-work.git / download
 
-http://localhost:9999/card/add
-request body
+go to biju-work-master
+
+mvn spring-boot:run
+
+
+http://localhost:9999/card/add  (POST REQUEST)
+
+Request body
 
   {
         "name": "visa",
@@ -24,7 +29,8 @@ request body
     }
 
 
-http://localhost:9999/card/list
+http://localhost:9999/card/list (GET REQUEST)
+
 [
     {
         "name": "visa",
