@@ -4,7 +4,7 @@ import com.myapp.card.model.CardDetails;
 import com.myapp.card.util.Luhn;
 import com.myapp.card.util.exception.CreditCardValidationException;
 import com.myapp.card.util.exception.DataNotFoundException;
-import com.myapp.card.util.exception.ResourceFoundException;
+import com.myapp.card.util.exception.ResourceNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -23,7 +23,7 @@ public class CreditCardService {
         }else if(!Luhn.Check(cardDetails.getCardNumber())){
             throw new CreditCardValidationException("Please use valid credit card");
         }else if(cardDetailsList.contains(cardDetails)){
-            throw new ResourceFoundException("This card already registered!");
+            throw new ResourceNotFoundException("This card already registered!");
         }
         cardDetailsList.add(cardDetails);
 

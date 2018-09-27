@@ -25,6 +25,10 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
+import javax.xml.transform.OutputKeys;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -106,6 +110,11 @@ public class CreditCardControllerTest {
 
         MockHttpServletResponse response = result.getResponse();
         assertEquals(HttpStatus.OK.value(), response.getStatus());
+
+        mockMvc.perform(get(RESOURCE_LOCATION_PATTERN_GET)
+                .contentType(MediaType.APPLICATION_JSON_VALUE));
+                //.andExpect(mvcResult -> );
+
     }
 
     private CardDetails mockCard(){

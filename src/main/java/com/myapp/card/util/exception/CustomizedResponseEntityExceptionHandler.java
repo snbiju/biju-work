@@ -28,8 +28,8 @@ public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExce
         return new ResponseEntity<>(errorDetails, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-    @ExceptionHandler(ResourceFoundException.class)
-    public final ResponseEntity<ErrorDetails> handleResourceFoundException(ResourceFoundException ex, WebRequest request) {
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public final ResponseEntity<ErrorDetails> handleResourceFoundException(ResourceNotFoundException ex, WebRequest request) {
         ErrorDetails errorDetails = new ErrorDetails(new Date(), ex.getMessage(),
                 request.getDescription(false));
         return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
@@ -40,6 +40,14 @@ public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExce
         ErrorDetails errorDetails = new ErrorDetails(new Date(),"Validation Failed",
                 request.getDescription(false));
         return new ResponseEntity<>(errorDetails, HttpStatus.BAD_REQUEST);
+    }
+    @ExceptionHandler(DataNotFoundException.class)
+    protected ResponseEntity<Object> handleMethodArgumentNotValid(DataNotFoundException ex,
+                                                                  HttpHeaders headers, HttpStatus status, WebRequest request) {
+        ErrorDetails errorDetails = new ErrorDetails(new Date(), "Validation Failed",
+                request.getDescription(false));
+
+        return new ResponseEntity(errorDetails, HttpStatus.BAD_REQUEST);
     }
 
     @Override
